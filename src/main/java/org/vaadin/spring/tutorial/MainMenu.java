@@ -2,14 +2,16 @@ package org.vaadin.spring.tutorial;
 
 import com.vaadin.ui.Button;
 import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.ui.themes.ValoTheme;
 
 public class MainMenu extends HorizontalLayout{
 	public MainMenu() {
-        Button home = new Button("UI Scoped View",
+        Button ui = new Button("UI Scoped View",
                 event -> getUI().getNavigator().navigateTo("ui"));
-        Button away = new Button("View Scoped View",
+        ui.addStyleName(ValoTheme.BUTTON_FRIENDLY);
+        Button view = new Button("View Scoped View",
                 event -> getUI().getNavigator().navigateTo("view"));
-
-        addComponents(home, away);
+        view.addStyleName(ValoTheme.BUTTON_FRIENDLY);
+        addComponents(ui, view);
     }
 }
