@@ -6,12 +6,12 @@ import com.vaadin.ui.themes.ValoTheme;
 
 public class MainMenu extends HorizontalLayout{
 	public MainMenu() {
-        Button ui = new Button("UI Scoped View",
-                event -> getUI().getNavigator().navigateTo("ui"));
-        ui.addStyleName(ValoTheme.BUTTON_FRIENDLY);
-        Button view = new Button("View Scoped View",
-                event -> getUI().getNavigator().navigateTo("view"));
-        view.addStyleName(ValoTheme.BUTTON_FRIENDLY);
-        addComponents(ui, view);
+        setSizeFull();
+        setMargin(true);
+        setSpacing(true);
+        Button ui = new Button("Button",
+                event -> getUI().showNotification("Test"));
+        ui.addStyleName(ValoTheme.BUTTON_PRIMARY);
+        addComponents(ui);
     }
 }
