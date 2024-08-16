@@ -36,5 +36,9 @@
 
   background-color: greenyellow !important;
 
-  // Insert your own theme rules here
+  .v-button-primary {
+    background-color: aqua !important;
+    background-image: -webkit-linear-gradient(top, white 2%, aqua 98%);;
+  }
+
 }

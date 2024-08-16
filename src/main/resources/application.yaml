@@ -1,3 +1,6 @@
 vaadin:
   servlet:
     productionMode: true
+
+server:
+  port : 8380
